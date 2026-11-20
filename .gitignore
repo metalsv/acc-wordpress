@@ -1,0 +1,10 @@
+# Referencias de terceros: capturas de la plantilla de pago Consalt (TemplateMonster).
+# Material con licencia, no se versiona en un repositorio público.
+_refs/
+
+# Sistema
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+*.log

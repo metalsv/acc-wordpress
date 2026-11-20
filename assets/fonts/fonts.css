@@ -1,0 +1,4 @@
+/* ACC — tipografía autoalojada (funciona sin internet) */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url('Archivo-normal.woff2') format('woff2');}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:100 900;font-display:swap;src:url('InstrumentSerif-italic.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 900;font-display:swap;src:url('JetBrainsMono-normal.woff2') format('woff2');}

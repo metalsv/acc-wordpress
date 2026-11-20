@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ACC · Maqueta web — entrega de pantallas</title>
+<link rel="stylesheet" href="assets/css/acc.css">
+<style>
+  body{background:var(--paper-2)}
+  .board{background:var(--navy);color:#fff;padding:clamp(48px,6vw,80px) 0;position:relative;overflow:hidden}
+  .board::before{content:"";position:absolute;inset:0;opacity:.35;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 90px);mask-image:linear-gradient(180deg,#000,transparent)}
+  .board .wrap{position:relative;z-index:2}
+  .board h1{font-size:clamp(34px,4.4vw,58px);letter-spacing:-.04em;line-height:1.02;margin-top:18px;max-width:20ch}
+  .board p{color:rgba(255,255,255,.7);margin-top:18px;max-width:60ch;font-size:16px}
+  .board__meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:30px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .board__meta b{color:#fff}
+  .grid-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.6vw,32px);margin-top:clamp(36px,4vw,52px)}
+  .scard{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;position:relative;transition:transform .4s var(--ease),box-shadow .4s}
+  .scard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .scard__num{position:absolute;right:16px;top:14px;z-index:3;font-family:var(--mono);font-size:11px;letter-spacing:.12em;background:#fff;padding:4px 8px}
+  .scard__ph{aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:var(--paper-3)}
+  .scard__ph img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .scard__body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:9px;flex:1}
+  .scard__body h3{font-size:19px;letter-spacing:-.02em}
+  .scard__body p{font-size:13.5px;color:var(--gray);line-height:1.6}
+  .scard__body .link-arrow{margin-top:auto;padding-top:10px;font-size:13px}
+  .legend{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid var(--line);padding-top:32px}
+  .legend div h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-bottom:10px;font-weight:500}
+  .legend div p{font-size:13.5px;color:var(--gray);line-height:1.6}
+  .swatches{display:flex;gap:0;border:1px solid var(--line);margin-top:6px}
+  .swatches span{flex:1;height:44px}
+  @media(max-width:900px){.grid-screens{grid-template-columns:1fr}.legend{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<section class="board">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--sky)">Maqueta de diseño · v1</span>
+    <h1>ACC — Propuesta de sitio web</h1>
+    <p>Nueve piezas: las ocho pantallas del sitio y la hoja de sistema que las unifica. Navegación funcional entre páginas, filtro de servicios, buscador de noticias y formulario operativo. Todas las pantallas son responsivas.</p>
+    <div class="board__meta">
+      <span><b>Cliente</b> ACC Auditores y Consultores</span>
+      <span><b>Pantallas</b> 9</span>
+      <span><b>Idioma</b> ES / EN</span>
+      <span><b>Formato</b> Desktop 1440 px</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid-screens"><a class="scard" href="home.html">
+      <span class="scard__num">01</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/home.jpg" alt="Pantalla Home" loading="lazy"></div>
+      <div class="scard__body"><h3>Home</h3><p>Hero a dos columnas, franja de afiliaciones, 4 categorías de servicio, diferenciales, cifras, socios, cita y noticias.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="nosotros.html">
+      <span class="scard__num">02</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/nosotros.jpg" alt="Pantalla Quiénes somos" loading="lazy"></div>
+      <div class="scard__body"><h3>Quiénes somos</h3><p>Historia, línea de tiempo 2001–2018, misión/visión/valores, socios, personal y afiliaciones.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="agn.html">
+      <span class="scard__num">03</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/agn.jpg" alt="Pantalla AGN International" loading="lazy"></div>
+      <div class="scard__body"><h3>AGN International</h3><p>Página interna enlazada desde Quiénes somos: red global, 5 regiones y ventajas.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="servicios.html">
+      <span class="scard__num">04</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/servicios.jpg" alt="Pantalla Servicios (filtrable)" loading="lazy"></div>
+      <div class="scard__body"><h3>Servicios (filtrable)</h3><p>Los 22 servicios con filtro por categoría, proceso de trabajo y FAQ de 8 preguntas.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="servicio-auditoria-financiera.html">
+      <span class="scard__num">05</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/servicio-auditoria-financiera.jpg" alt="Pantalla Detalle de servicio" loading="lazy"></div>
+      <div class="scard__body"><h3>Detalle de servicio</h3><p>Plantilla de servicio: alcance, entregables, proceso y barra lateral de contacto.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="noticias.html">
+      <span class="scard__num">06</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/noticias.jpg" alt="Pantalla Noticias" loading="lazy"></div>
+      <div class="scard__body"><h3>Noticias</h3><p>Buscador funcional, nota destacada, rejilla de publicaciones y paginación.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="noticia.html">
+      <span class="scard__num">07</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/noticia.jpg" alt="Pantalla Nota / artículo" loading="lazy"></div>
+      <div class="scard__body"><h3>Nota / artículo</h3><p>Plantilla de artículo con autor, imagen, cuerpo, compartir y relacionadas.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="contacto.html">
+      <span class="scard__num">08</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/contacto.jpg" alt="Pantalla Contáctenos" loading="lazy"></div>
+      <div class="scard__body"><h3>Contáctenos</h3><p>Datos, formulario con validación, mapa de la oficina y aviso de confidencialidad.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a><a class="scard" href="sistema.html">
+      <span class="scard__num">09</span>
+      <div class="scard__ph"><img src="pantallas/thumbs/sistema.jpg" alt="Pantalla Sistema de diseño" loading="lazy"></div>
+      <div class="scard__body"><h3>Sistema de diseño</h3><p>Hoja de identidad aplicada: monograma, paleta, tipografía, recursos gráficos y biblioteca de componentes.</p><span class="link-arrow">Abrir pantalla <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 5.5l6.5 6.5-6.5 6.5"/></svg></span></div>
+    </a></div>
+
+    <div class="legend">
+      <div>
+        <h4>Paleta</h4>
+        <div class="swatches">
+          <span style="background:#0A2540" title="Azul marino"></span>
+          <span style="background:#06182B" title="Marino profundo"></span>
+          <span style="background:#8FC3E4" title="Celeste"></span>
+          <span style="background:#E4702F" title="Anaranjado"></span>
+          <span style="background:#6C7C8C" title="Gris"></span>
+          <span style="background:#FFFFFF;border-left:1px solid #eee" title="Blanco"></span>
+        </div>
+        <p style="margin-top:12px">Marino como color principal, blanco de fondo, anaranjado y celeste como secundarios, gris para texto de apoyo.</p>
+      </div>
+      <div>
+        <h4>Tipografía</h4>
+        <p><b style="font-family:var(--sans);font-size:17px;color:var(--navy)">Archivo</b> — titulares y texto.<br><i style="font-family:var(--serif);font-size:17px;color:var(--navy)">Instrument Serif</i> — acentos editoriales.<br><span style="font-family:var(--mono);font-size:12px">JetBrains Mono</span> — datos y etiquetas.</p>
+      </div>
+      <div>
+        <h4>Qué es funcional</h4>
+        <p>Filtro de servicios por categoría, buscador de noticias, acordeón de FAQ, menú móvil, formulario con confirmación, selector ES/EN, suscripción al boletín.</p>
+      </div>
+      <div>
+        <h4>Pendiente del cliente</h4>
+        <p>Logotipo y fotografías reales, nombres de socios, textos de misión/visión definitivos, logotipos de AGN y Camarasal, y confirmación de la ubicación del FAQ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
